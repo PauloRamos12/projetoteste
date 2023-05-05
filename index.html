@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vai Ter Que Aceitar</title>
+	<style>
+		#sim {
+			position: relative;
+			top: 0;
+			left: 0;
+			cursor: pointer;
+            border-color: red;
+            color: red;
+		}
+
+		#nao {
+			position: relative;
+			top: 0;
+			left: 0;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>Quer namorar comigo?</h1>
+	<button id="sim" onclick="resposta('sim')">Sim</button>
+	<button id="nao" onmousemove="mover()">Não</button>
+
+	<script>
+		function resposta(opcao) {
+			if (opcao === 'sim') {
+				alert("Ué, mas já não namoramos? Eu sei, sou irresistivel");
+			} else if (opcao === 'nao') {
+				alert("Ah, que pena... vai ter que namorar mesmo assim");
+			}
+		}
+
+		function mover() {
+			var x = Math.floor(Math.random() * 200) - 100;
+			var y = Math.floor(Math.random() * 200) - 100;
+			document.getElementById("nao").style.top = y + "px";
+			document.getElementById("nao").style.left = x + "px";
+		}
+	</script>
+</body>
+</html>
